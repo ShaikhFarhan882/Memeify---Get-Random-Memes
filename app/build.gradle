@@ -63,4 +63,7 @@ dependencies {
 
     implementation 'com.klinkerapps:link_builder:2.0.5'
 
+    //Dexter
+    implementation 'com.karumi:dexter:6.2.3'
+
 }

@@ -17,13 +17,14 @@
         tools:context=".MainActivity">
 
         <TextView
+            android:id="@+id/textView"
+            style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@{data.memeData.title}"
             android:textColor="@color/white"
             android:textSize="22sp"
-            style="@style/TextAppearance.AppCompat.Headline"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -78,19 +79,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <TextView
             android:id="@+id/sourceMeme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:padding="8dp"
+            android:padding="2dp"
+            android:layout_marginEnd="4dp"
             android:text="Source"
             android:textColor="@color/white"
             android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/downloadMeme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_download"
+            android:layout_marginStart="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/downloadMeme"
+            app:layout_constraintStart_toStartOf="@+id/downloadMeme"
+            app:layout_constraintTop_toBottomOf="@+id/downloadMeme" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/nextMeme"
+            app:layout_constraintStart_toStartOf="@+id/nextMeme"
+            app:layout_constraintTop_toBottomOf="@+id/nextMeme" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
